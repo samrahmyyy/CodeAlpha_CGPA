@@ -1,5 +1,5 @@
-
 #include <iostream>
+#include <iomanip>
 using namespace std ;
 int main() {
   int numCourses;
@@ -24,12 +24,13 @@ int main() {
         totalGradePoints += grade * credit;
         totalCredits += credit;
     }
-     double gpa = totalGradePoints / totalCredits;
+      double gpa = totalGradePoints / totalCredits;
 cout << "   "<<endl;
     cout << "Total Credit Hours: " << totalCredits << "\n";
     cout << "Total Grade Points: " << totalGradePoints << "\n";
-    cout << "GPA: " << gpa << "\n";
-    cout << "Final CGPA: " << gpa << "\n";
+    cout << fixed << setprecision(2);
+    cout << "GPA: " << gpa << " | "<< "Final CGPA: " << gpa;
+
 
 
     return 0;
